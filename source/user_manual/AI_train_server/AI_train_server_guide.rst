@@ -4,36 +4,69 @@ AI Training Server Setup
 
 Follow these steps to set up your AI Training Server:
 
-1. Use Etcher or Ubuntu’s graphical interface to create a bootable disk from the ISO file.
-2. Insert the bootable disk into the computer.
-3. Restart the computer and ensure it boots from the bootable disk.
+1. Prepare a Ubuntu os system with nvidia gpu (recommend version: ubuntu-24.04)
+2. Install nvidia driver
 
-.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_setup_3.jpg
+* Open Software & Updates
+* Navigate to the Additional Drivers tab
+* Select the driver labeled "proprietary, tested" (e.g., nvidia-driver-560)
+* Click Apply Changes and reboot
+* After rebooting, verify the installation by running nvidia-smi
+
+.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_setup_2_1.png
    :align: center
 
-   System booting from a bootable disk
 
-4. After booting, the system will pause at the login interface. Wait for 10 minutes for the system to automatically restart. Do not remove the bootable disk during this process.
-5. Once the system automatically restarts and returns to the login interface, the installation is complete.
+3. Install docker
 
-.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_setup_5.jpg
-   :align: center
+* please follow the instructions from: https://docs.docker.com/engine/install/ubuntu/
+* add user into docker group and reboot
 
-   System reboot flow
+.. code-block:: bash
 
-6. After installation, use another computer to connect to the AI training server’s interface.
-7. Obtain the server’s IP address using a router, then use the link “http://[IP]/login” to access the training interface.
-8. On the model training interface, log in with the default username “admin@realtek.com” and password “rtkadmin.” After logging in, you can change the password.
+   sudo usermod -aG docker $USER
 
-.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_setup_8_1.jpg
+* Use docker ps to verify the installation
+
+4. Create a folder to put the scripts and tar.gz files inside (ex. AI_train_server), the folder structure will be similar as follow
+
+.. code-block:: bash
+
+   AI_train_server/
+   |-- docker_images/
+   |   |-- IMAGES.txt --> docker images list
+   |   |-- load_docker_images.sh  --> installation scripts
+   |   |-- acuity_converter_v1.1.tar.gz  --> docker image file
+   |   |-- training-server-train_latest.tar.gz  --> docker image file
+   |   |-- training-server-importer_latest.tar.gz  --> docker image file
+   |   |-- nvidia_cuda_12.1.1-cudnn8-runtime-ubuntu22.04.tar.gz  --> docker image file
+   |-- base
+   |-- base-20260109-165208.tar.gz
+   |-- workspaces_example
+   |-- workspaces-example-20251223-135111.tar.gz
+   |-- INSTALLATION.md
+
+
+5. Install the scripts
+
+.. code-block:: bash
+
+   tar -xzf base-<timestamp>.tar.gz
+   tar -xzf workspaces-example-<timestamp>.tar.gz
+   cd docker_images && ./load_docker_images.sh
+   cd ../base
+   sudo ./install.sh
+   cd ../workspaces_example && ./install_workspaces_example.sh (optional, generate default example)
+
+6. After installation, there will an shortcut on the desktop, or you can login by "http://localhost:8080/login".
+
+.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_setup_6_1.jpg
    :align: center
 
    System login interface
 
-.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_setup_8_2.jpg
-   :align: center
+7. On the model training interface, log in with the default username “admin@realtek.com” and password "admin123” After logging in, you can change the password if you want.
 
-   Change password
 
 ===========================
 AI Training Server Run
@@ -45,13 +78,18 @@ AI Training Server Run
 
 2. **Start the Training**
 
-   Once you have successfully logged into the server, find the ‘Run’ button located at the top-left corner of the dashboard and click it to start the training process.
+   Once you have successfully logged into the server, you can upload your own dataset or download the example datasets from hugging face, user can also adjust the training configuration.
+
+.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_run_2.png
+   :align: center
+
+   Importing dataset
 
 3. **Download the Model**
 
-   When the training is completed, a download button will appear in the top-left corner. Click this button to download the trained model, which you can use on AmebaPro2.
+   When the training is completed, a download button will appear. Click this button to download the trained model, which you can use on AmebaPro2.
 
-.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_run_1.jpg
+.. figure:: ../../_static/user_manual/AI_train_server/ai_train_server_run_3.png
    :align: center
 
    'Run' and 'Download Model' button

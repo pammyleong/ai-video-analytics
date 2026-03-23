@@ -1,5 +1,5 @@
-**AI Training Server Setup**
-=============================
+AI Training Server Setup
+==========================
 
 1. Hardware Requirements
 -------------------------
@@ -82,8 +82,8 @@ After installation, there will an shortcut on the desktop, or you can login by "
 
 On the model training interface, log in with the default username “admin@realtek.com” and password "admin123” After logging in, you can change the password if you want.
 
-**AI Training Server Run**
-===========================
+AI Training Server Run
+=========================
 
 1. **Log into the Server**
 
@@ -107,8 +107,8 @@ On the model training interface, log in with the default username “admin@realt
 
    'Run' and 'Download Model' button
 
-**AI Training Server Q & A**
-============================
+AI Training Server Q & A
+==========================
 
 **1. Is setting up AI Training Server a one-click installation?**
 
@@ -124,7 +124,7 @@ On the model training interface, log in with the default username “admin@realt
 **3. Can data annotation and dataset splitting be performed automatically?**
 
 .. Tip::
-   - No, it cannot automatically generate annotations. Manual labeling is required, either using external annotation tools or the server's built-in annotation tool.
+   - The automatic data annotation feature is currently in development.
    
    - However, dataset splitting is performed automatically. 
 

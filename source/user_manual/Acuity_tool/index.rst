@@ -10,5 +10,6 @@ Realtek AmebaPro2 Model Conversion Tool
    Acuity_installation_manual
    Acuity_installation_docker
    Acuity_convert_steps
+   Acuity_NN_loading_steps
    Acuity_license
    

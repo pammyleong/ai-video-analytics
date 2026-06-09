@@ -1,3 +1,5 @@
+.. _docker_method:
+
 Acuity Toolkit Docker Installation
 ==================================
 
@@ -5,6 +7,11 @@ Acuity Toolkit Docker Installation
   :local:
   :depth: 2
 
+
+.. note :: 
+   To access offline AI model conversion tools, please fill up this  `Form <https://forms.cloud.microsoft/r/ME5sTbximx>`__ using your **official company, institution, or educational organization email account**. This will help us to verify your application and process your inquiry more efficiently. 
+   
+   Once approved, you will be added to ameba-ai-offline-toolkit private repository. Then, you may refer to the following steps to install the Offline Acuity Toolkit.
 
 Download Acuity Toolkit Docker
 ------------------------------
@@ -23,13 +30,7 @@ Toolkit Files and Github Access
 
 - :download:`Verisilicon_SW_NBInfo_1.2.17_20230412.tgz <https://github.com/Ameba-AIoT/ameba-ai-offline-toolkit/releases/download/v1.0.0/Verisilicon_SW_NBInfo_1.2.17_20230412.tgz>`
 
-.. note :: 
-   To access offline AI model conversion tools, please fill up this  `Form <https://forms.cloud.microsoft/r/ME5sTbximx>`__ with your **official company, institution, or educational organization email account**. This will help us to verify your application and process your inquiry more efficiently. 
-   
-   Once approved, please sign in to your GitHub account to download the files.
-
-
-We store or docker images on **GitHub Container Registry (GHCR)**, please establish Personal Access Token (PAT)\
+We store or docker images on **GitHub Container Registry (GHCR)**, please establish Personal Access Token (PAT)
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
 2. Generate new token (classic)
@@ -39,7 +40,7 @@ We store or docker images on **GitHub Container Registry (GHCR)**, please establ
 Docker Entry
 ------------
 
-Before excuting the "install" and "run" scripts, kindly ensure that you have authenticate to GHCR on Docker, please use the generated PAT as password.
+Before executing the "install" and "run" scripts, kindly ensure that you have authenticate to GHCR on Docker, please use the generated PAT as password.
 
 .. code-block:: bash
 

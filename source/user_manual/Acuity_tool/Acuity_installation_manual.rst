@@ -1,3 +1,5 @@
+.. _manual_method:
+
 Acuity Toolkit Manual Installation
 ==================================
 
@@ -5,6 +7,10 @@ Acuity Toolkit Manual Installation
   :local:
   :depth: 2
 
+.. note :: 
+   To access offline AI model conversion tools, please fill up this  `Form <https://forms.cloud.microsoft/r/ME5sTbximx>`__ using your **official company, institution, or educational organization email account**. This will help us to verify your application and process your inquiry more efficiently. 
+   
+   Once approved, you will be added to ameba-ai-offline-toolkit private repository. Then, you may refer to the following steps to install the Offline Acuity Toolkit.
 
 Download Acuity Toolkit
 -----------------------
@@ -23,11 +29,6 @@ Toolkit Files
 - :download:`Verisilicon_SW_VIP_Acuity_6.18.8_whl_20250303.tgz <https://github.com/Ameba-AIoT/ameba-ai-offline-toolkit/releases/download/v1.0.0/Verisilicon_SW_VIP_Acuity_6.18.8_whl_20250303.tgz>`
 
 - :download:`Verisilicon_Tool_VivanteIDE_v5.8.1_CL664938_Linux_Windows_SDK_p6.4.x_dev_6.4.14.tgz <https://github.com/Ameba-AIoT/ameba-ai-offline-toolkit/releases/download/v1.0.0/Verisilicon_Tool_VivanteIDE_v5.8.1_CL664938_Linux_Windows_SDK_p6.4.x_dev_6.4.14_23Q1_CL665849A_20230426.tgz>`
-
-.. note :: 
-   To access offline AI model conversion tools, please fill up this  `Form <https://forms.cloud.microsoft/r/ME5sTbximx>`__ with your **official company, institution, or educational organization email account**. This will help us to verify your application and process your inquiry more efficiently. 
-   
-   Once approved, please sign in to your GitHub account to download the files.
 
 Install Acuity Toolkit
 ----------------------

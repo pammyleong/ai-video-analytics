@@ -19,9 +19,11 @@ For **manual installation** and user guide, please refer to the `Toolkit Manual 
 Eligibility
 -----------
 .. note :: 
-   To access offline AI model conversion tools, please fill up this  `Form <https://forms.cloud.microsoft/r/ME5sTbximx>`__ with your **official company, institution, or educational organization email account**. This will help us to verify your application and process your inquiry more efficiently. 
+   The Offline AI Model Conversion Toolkit is now available for users with **Work or School** email account.
+
+   To access offline AI model conversion tools, please fill up this  `Form <https://forms.cloud.microsoft/r/ME5sTbximx>`__ using your **official company, institution, or educational organization email account**. This will help us to verify your application and process your inquiry more efficiently. 
    
-   Once approved, please sign in to your GitHub account to download the files.
+   Once approved, you will be added to ameba-ai-offline-toolkit private repository. Then, you may proceed to install the Offline Acuity Toolkit by referring to the :ref:`Docker <docker_method>` or :ref:`Manual <manual_method>` installation guides.
 
 Brief Comparison between Offline and Online Conversion Toolkit
 --------------------------------------------------------------
